@@ -1,10 +1,16 @@
 
 import './App.css';
+import Home from './pages/home/Home'
+import {Link, Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
     <div className="app">
-      <h1>google</h1>
+      <Switch>
+        <Route path='/'>
+        <Home/>
+        </Route>
+      </Switch>
     </div>
   );
 }
