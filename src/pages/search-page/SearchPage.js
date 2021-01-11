@@ -65,9 +65,23 @@ function SearchPage() {
                     </div>
                 </div>
             </div>
-            <div className='searchPage__results'>
 
-            </div>
+            {term&&(
+                <div className='searchPage__results'>
+                    <p className='searchPage__resultCount'>About {data?.searchInformation.formattedTotalResults} results({data?.searchInformation.formattedSearchTime} seconds) for {term}</p>
+                    {data?.items.map(item=>(
+                    <div key={item.cacheId} className='searchPage__result'>
+                        <a className='searchPage__resultUrl' href={item.link}>
+                            {item.displayLink}
+                        </a>
+                        <a className='searchPage__resultTitle' href={item.link}><h2>{item.title}</h2></a>
+                        <p className='searchPage__resultSnippet'>{item.snippet}</p>
+                    </div>
+                    ))}
+                </div>
+               
+            )}
+
         </div>
     )
 }
