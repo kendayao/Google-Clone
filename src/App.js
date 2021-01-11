@@ -2,6 +2,7 @@
 import './App.css';
 import Home from './pages/home/Home'
 import {Route, Switch} from 'react-router-dom'
+import SearchPage from './pages/search-page/SearchPage'
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="app">
       <Switch>
       <Route path='/search'>
-          <h1>This is the search page</h1>
+          <SearchPage/>
         </Route>
         <Route path='/'>
           <Home/>
