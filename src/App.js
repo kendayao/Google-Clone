@@ -1,14 +1,18 @@
 
 import './App.css';
 import Home from './pages/home/Home'
-import {Link, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
+
 
 function App() {
   return (
     <div className="app">
       <Switch>
+      <Route path='/search'>
+          <h1>This is the search page</h1>
+        </Route>
         <Route path='/'>
-        <Home/>
+          <Home/>
         </Route>
       </Switch>
     </div>
