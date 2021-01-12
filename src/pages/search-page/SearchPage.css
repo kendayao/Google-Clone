@@ -5,18 +5,6 @@
     margin-right: 50px;
 }
 
-.searchPage__headerMobile{
-    text-align: center;
-    margin-top: 20px;
-    display: none;
-}
-
-.searchPage__logoMobile{
-    object-fit: contain;
-    height: 50px;
-    margin-right: 50px;
-}
-
 .searchPage__header{
     display: flex;
     position: sticky;
@@ -27,7 +15,6 @@
     padding: 30px;
     border-bottom: 1px solid lightgray;
 }
-
 
 .searchPage__headerBody>.search>.search__input{
     margin-top: 0;
@@ -116,27 +103,37 @@
 }
 
 @media (max-width: 800px){
-    .searchPage__headerMobile{
-        display: block;
-        padding-left: 30px;
+    .searchPage__header{
+        flex-direction: column;
+        align-items: center;
     }
 
     .searchPage__logo{
-        display: none;
+        margin-right: 0px;
+        margin-bottom: 10px
     }
 
-
-    .searchPage__option{
-        margin-right: 10px;
+    .searchPage__headerBody{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
 
     .searchPage__options{
-        font-size: 14px;
-        text-align: center;
+        width: 100%;
+        margin-left: 10px;
     }
 
-    .searchPage__header{
-       padding: 30px 0;
+    .searchPage__optionsRight{
+        margin-left: 0px;
+    }
+
+    .searchPage__option>.MuiSvgIcon-root{
+        font-size: 1rem;
+    }
+
+    .searchPage__option{
+        font-size: 1rem;
     }
 
     .searchPage__results{
@@ -150,7 +147,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
 }
 
 @media (max-width: 500px){
@@ -164,21 +161,41 @@
         font-size: 14px;
     }
 
-    .searchPage__option{
-        font-size: 12px;
-    }
-
-    .searchPage__headerMobile{
-        padding-left: 60px;
-    }
-
     .searchPage__optionsRight{
         display: none;
     }
+
+    .searchPage__header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .searchPage__option{
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .searchPage__option a{
+        margin-left: 2px;
+    }
+
+    .searchPage__options{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .searchPage__options{
+        margin-left: 5px;
+    }
+
 }
 
 @media (max-width: 320px){
-    .searchPage__headerMobile{
-        padding-left: 100px;
+    .searchPage__options{
+        margin-left: -18px;
     }
+
 }
+
+
+

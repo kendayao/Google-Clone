@@ -14,18 +14,12 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 function SearchPage() {
     const[{term},dispatch]=useStateValue();
-    const {data}=useGoogelSearch(term)
+    // const {data}=useGoogelSearch(term)
 
-    // const data=responseData
-    // console.log(data)
+    const data=responseData
+    console.log(data)
     return (
         <div className='searchPage'>
-            <div className='searchPage__headerMobile'> 
-                <Link to='/'>
-                    <img className='searchPage__logoMobile'
-                    src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='google logo'/>
-                </Link>
-            </div>
             <div className='searchPage__header'>
                 <Link to='/'>
                     <img className='searchPage__logo'
@@ -77,10 +71,10 @@ function SearchPage() {
                     <p className='searchPage__resultCount'>About {data?.searchInformation.formattedTotalResults} results({data?.searchInformation.formattedSearchTime} seconds) for {term}</p>
                     {data?.items.map(item=>(
                     <div key={item.cacheId} className='searchPage__result'>
-                        <a className='searchPage__resultUrl' href={item.link}>
+                        <a className='searchPage__resultUrl' href={item.link} target="_blank">
                             {item.displayLink}
                         </a>
-                        <a className='searchPage__resultTitle' href={item.link}><h2>{item.title}</h2></a>
+                        <a className='searchPage__resultTitle' href={item.link} target="_blank"><h2>{item.title}</h2></a>
                         <p className='searchPage__resultSnippet'>{item.snippet}</p>
                     </div>
                     ))}
