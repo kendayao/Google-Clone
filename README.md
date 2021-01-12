@@ -22,6 +22,7 @@ Need to google something? Find what your looking for with this google clone appl
 - React.js
 - Context API
 - React Hooks
+- React Router
 - React Custom Hooks
 - Firebase (hosting)
 - Material UI
