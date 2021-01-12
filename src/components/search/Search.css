@@ -52,3 +52,9 @@
 .search__buttonsHidden{
     display: none !important;
 }
+
+@media (max-width: 500px){
+    .search__input{
+        padding: 10px 15px;
+    }
+}

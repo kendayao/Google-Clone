@@ -14,12 +14,18 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 function SearchPage() {
     const[{term},dispatch]=useStateValue();
-    // const {data}=useGoogelSearch(term)
+    const {data}=useGoogelSearch(term)
 
-    const data=responseData
-    console.log(data)
+    // const data=responseData
+    // console.log(data)
     return (
         <div className='searchPage'>
+            <div className='searchPage__headerMobile'> 
+                <Link to='/'>
+                    <img className='searchPage__logoMobile'
+                    src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='google logo'/>
+                </Link>
+            </div>
             <div className='searchPage__header'>
                 <Link to='/'>
                     <img className='searchPage__logo'
@@ -43,15 +49,15 @@ function SearchPage() {
                             </div>
                             <div className='searchPage__option'>
                                 <LocalOfferIcon />
-                                <Link to='/shopping'>shopping</Link>
+                                <Link to='/shopping'>Shopping</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <RoomIcon />
-                                <Link to='/maps'>maps</Link>
+                                <Link to='/maps'>Maps</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <MoreVertIcon />
-                                <Link to='/more'>more</Link>
+                                <Link to='/more'>More</Link>
                             </div>
                         </div>
                         <div className='searchPage__optionsRight'>
