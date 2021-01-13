@@ -15,9 +15,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 function SearchPage() {
     const[{term},dispatch]=useStateValue();
     const {data}=useGoogelSearch(term)
+   
 
     // const data=responseData
     // console.log(data)
+    
     return (
         <div className='searchPage'>
             <div className='searchPage__header'>
@@ -31,35 +33,35 @@ function SearchPage() {
                         <div className='searchPage__optionsLeft'>
                             <div className='searchPage__option'>
                                 <SearchIcon />
-                                <Link to='all'>All</Link>
+                                <Link to='#'>All</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <DescriptionIcon />
-                                <Link to='/news'>News</Link>
+                                <Link to='#'>News</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <ImageIcon />
-                                <Link to='/images'>Images</Link>
+                                <Link to='#'>Images</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <LocalOfferIcon />
-                                <Link to='/shopping'>Shopping</Link>
+                                <Link to='#'>Shopping</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <RoomIcon />
-                                <Link to='/maps'>Maps</Link>
+                                <Link to='#'>Maps</Link>
                             </div>
                             <div className='searchPage__option'>
                                 <MoreVertIcon />
-                                <Link to='/more'>More</Link>
+                                <Link to='#'>More</Link>
                             </div>
                         </div>
                         <div className='searchPage__optionsRight'>
                             <div className='searchPage__option'>
-                                <Link to='/settings'>Settings</Link>
+                                <Link to='#'>Settings</Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to='/tools'>Tools</Link>
+                                <Link to='#'>Tools</Link>
                             </div>
                         </div>
                     </div>
