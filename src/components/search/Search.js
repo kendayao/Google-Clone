@@ -21,6 +21,7 @@ function Search({hideButttons}) {
             term: input,
         })
         history.push('/search')
+        setInput('')
     };
 
     return (
