@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 import SearchPage from './pages/search-page/SearchPage'
 import Mail from './pages/mail/Mail'
 import MailHeader from './components/mail-header/MailHeader'
-import MailHeaderSide from './components/mail-header-side/MailHeaderSide'
+import MailBody from './components/mail-body/MailBody'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Switch>
       <Route path='/mail'>
           <MailHeader/>
-          <MailHeaderSide/>
+          <MailBody/>
         </Route>
         <Route path='/search'>
           <SearchPage/>

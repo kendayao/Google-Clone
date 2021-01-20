@@ -1,6 +1,7 @@
 .mailheaderside{
-    width: 18%; 
+    min-width: 235px; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.112);
+    margin-right: 10px;
 }
 
 .mailheaderside>button{
