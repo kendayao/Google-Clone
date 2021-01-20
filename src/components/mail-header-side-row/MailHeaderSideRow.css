@@ -1,0 +1,41 @@
+.mailHeaderSideRow{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 30px;
+    justify-content: space-between;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+.mailHeaderSideRow >.mailHeaderSideRow__left>p{
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mailHeaderSideRow--active{
+    background-color: #FCE8E6;
+    color: #D93026;
+}
+
+.mailHeaderSideRow__left{
+    display: flex;
+    align-items: center;
+}
+
+.mailHeaderSideRow__right{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mailHeaderSideRow__icon{
+    color: gray;
+}
+
+.mailHeaderSideRow__right--hide{
+    display: none;
+}
+
+.mailHeaderSideRow__right--show{
+    display: block;
+}
