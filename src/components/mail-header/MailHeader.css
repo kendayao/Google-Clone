@@ -1,0 +1,65 @@
+.mailHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.112);
+}
+
+.mailHeader__left{
+    width: 80%;
+}
+
+.mailHeader__left,
+.mailHeader__center,
+.mailHeader__right{
+    display: flex;
+    align-items: center;
+}
+
+.mailHeader__left > img{
+    height: 50px;
+}
+
+.mailHeader__left > p{
+    font-size: 25px;
+    font-weight: 300;
+    color: #5F6368;
+    margin-right: 80px;
+}
+
+.mailHeader__input>input{
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #F1F3F4;
+}
+
+.mailHeader__input>input:focus{
+    outline: none;
+}
+
+.mailHeader__input{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #F1F3F4;
+    border: none;
+    color: #5F6368;
+    
+}
+
+.mailHeader__input-icon{
+    color: gray;
+}
+
+.mailHeader__right> .MuiSvgIcon-root,
+.mailHeader__right> .MuiAvatar-root{
+    margin-left: 15px;
+    font-size: 25px;
+    color: gray;
+}
+
+
