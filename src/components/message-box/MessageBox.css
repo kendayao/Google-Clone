@@ -1,0 +1,36 @@
+.messageBox{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    height: 500px;
+    background-color: whitesmoke;
+}
+
+.messageBox__header{
+    display: flex;
+    padding: 15px 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #404040;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.messageBox__header>.MuiSvgIcon-root{
+    cursor: pointer;
+    color: gray;
+}
+
+.messageBox__header>p{
+    font-weight: 500;
+}
+
+.messageBox--show{
+    display: block;
+}
+
+.messageBox--hide{
+    display: none;
+}

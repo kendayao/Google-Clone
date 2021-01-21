@@ -17,6 +17,16 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     font-weight: 500;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+
+.mailheaderside>button:focus{
+    outline: none;
+}
+
+.mailheaderside>button:active{
+    box-shadow:  1px 1px 7px 2px  rgba(0, 0, 0, 0.242);
 }
 
 

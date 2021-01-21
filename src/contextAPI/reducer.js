@@ -1,9 +1,11 @@
 export const initialState={
     term: null,
+    messageBoxStatus: false
 }
 
 export const actionTypes={
     SET_SEARCH_TERM:'SET_SEARCH_TERM',
+    OPEN_MESSAGE_BOX: 'OPEN_MESSAGE_BOX'
 }
 
 const reducer=(state, action)=>{
@@ -14,6 +16,11 @@ const reducer=(state, action)=>{
             return{
                 ...state,
                 term: action.term
+            };
+        case actionTypes.OPEN_MESSAGE_BOX:
+            return{
+                ...state,
+                messageBoxStatus: action.messageBoxStatus
             };
 
             default: 

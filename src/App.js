@@ -13,6 +13,7 @@ function App() {
       <Route path='/mail'>
           <MailHeader/>
           <MailBody/>
+        
         </Route>
         <Route path='/search'>
           <SearchPage/>
@@ -21,6 +22,7 @@ function App() {
           <Home/>
         </Route>
       </Switch>
+      
     </div>
   );
 }

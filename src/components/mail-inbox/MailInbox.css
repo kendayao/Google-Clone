@@ -52,7 +52,8 @@
     color: gray;
 }
 
-.mailInbox__footer>p{
-    margin-right: 3px;
-    margin-left: 2px;
+
+.mailInbox__bottom{
+    overflow: hidden;
+    overflow-y: auto;
 }

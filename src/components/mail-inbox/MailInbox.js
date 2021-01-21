@@ -52,13 +52,13 @@ function MailInbox() {
                 <InboxItem />
                 <InboxItem />
                 <InboxItem />
-            </div>
-            <div className='mailInbox__footer'>
-                <p>Terms</p>
-                <FiberManualRecordIcon/>
-                <p>Privacy</p>
-                <FiberManualRecordIcon/>
-                <p>Program Policies</p>
+                <InboxItem />
+                <InboxItem />
+                <InboxItem />
+                <InboxItem />
+                <InboxItem />
+                <InboxItem />
+                <InboxItem />
             </div>
         </div>
     )
