@@ -4,7 +4,11 @@
     bottom: 0;
     width: 600px;
     height: 500px;
-    background-color: whitesmoke;
+    border: 1px solid rgba(0, 0, 0, 0.153);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 20;
+    background-color: white;
 }
 
 .messageBox__header{
@@ -14,8 +18,8 @@
     justify-content: space-between;
     background-color: #404040;
     color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .messageBox__header>.MuiSvgIcon-root{
@@ -33,4 +37,63 @@
 
 .messageBox--hide{
     display: none;
+}
+
+.messageBox__body{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 15px;
+}
+
+.messageBox__body>input{
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.221);
+}
+
+.messageBox__body>textarea{
+    padding: 15px 1px;
+    font-size: 16px;
+    border: none;
+    overflow: scroll;
+    font-family: inherit;
+}
+
+.messageBox__body>textarea{
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+.messageBox__body>textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.messageBox__body>textarea:focus,
+.messageBox__body>input:focus{
+    outline: none;
+}
+
+.messageBox__footer{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.messageBox__footer>button{
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1A73E8;
+    color: white;
+    margin-right: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.messageBox__footer>.MuiSvgIcon-root{
+    margin-right: 8px;
+    color: gray;
 }

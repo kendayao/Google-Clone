@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './MailInbox.css'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -9,8 +9,26 @@ import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import InboxItem from '../inbox-item/InboxItem'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import db from '../../firebase'
 
 function MailInbox() {
+
+    const [messages, setMessages]=useState([])
+
+    useEffect(()=>{
+        db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot=>(
+            setMessages(snapshot.docs.map(doc=>({
+                id: doc.id,
+                data: doc.data()
+            })))
+        ))
+
+            
+    },[])
+
+    console.log(messages)
+
+
     return (
         <div className='mailInbox'>
             <div className='mailInbox__top'>
@@ -34,31 +52,13 @@ function MailInbox() {
                 </div>
             </div>
             <div className='mailInbox__bottom'>
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
-                <InboxItem />
+                {messages.map(message=>(<InboxItem 
+                recipient={message.data.recipient} 
+                subject={message.data.subject}
+                message={message.data.message}
+                timestamp={message.data.timestamp}
+                key={message.id}
+                />))}
             </div>
         </div>
     )

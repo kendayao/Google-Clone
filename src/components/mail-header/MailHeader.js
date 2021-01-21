@@ -14,7 +14,7 @@ function MailHeader() {
                 <MenuIcon />
                 <img src='https://1000logos.net/wp-content/uploads/2018/05/Gmail-logo.png' alt='gmail logo' />
                 <p>Gmail</p>
-                <div class='mailHeader__input'>
+                <div className='mailHeader__input'>
                     <SearchIcon className='mailHeader__input-icon'/>
                     <input placeholder='Search mail' />
                 </div>

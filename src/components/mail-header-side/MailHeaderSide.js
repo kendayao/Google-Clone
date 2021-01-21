@@ -15,12 +15,12 @@ import {useStateValue} from '../../contextAPI/StateProvider';
 import {actionTypes} from '../../contextAPI/reducer'
 
 function MailHeaderSide() {
-    const [{},dispatch]=useStateValue();
+    const [{messageBoxStatus},dispatch]=useStateValue();
 
     const openMessageBox=()=>{
         dispatch({
             type: actionTypes.OPEN_MESSAGE_BOX,
-            messageBoxStatus: true
+            messageBoxStatus: !messageBoxStatus
         })
     }
 
