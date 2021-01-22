@@ -33,7 +33,6 @@ function MessageBox() {
             read: false,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
-
         setToEmail('')
         setSubject('')
         setMessage('')

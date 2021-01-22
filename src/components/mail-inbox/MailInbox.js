@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './MailInbox.css'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -8,7 +8,6 @@ import InboxIcon from '@material-ui/icons/Inbox';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import InboxItem from '../inbox-item/InboxItem'
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
 import db from '../../firebase'
 import {useStateValue} from '../../contextAPI/StateProvider'
@@ -19,7 +18,7 @@ function MailInbox() {
     const [{messages,messageBoxStatus},dispatch]=useStateValue();
 
     useEffect(()=>{
-        db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot=>(
+        const unsubscribe=db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot=>(
            dispatch({
                type: actionTypes.SET_MESSAGES,
                messages: snapshot.docs.map(doc=>({
@@ -28,7 +27,8 @@ function MailInbox() {
             }))
            })
         ))
-    },[])
+        return()=>unsubscribe();
+    },[dispatch])
 
     const openMessageBox=()=>{
         dispatch({

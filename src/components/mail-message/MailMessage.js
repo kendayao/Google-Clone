@@ -2,19 +2,14 @@ import React, {useEffect, useState} from 'react'
 import './MailMessage.css'
 import DeleteIcon from '@material-ui/icons/Delete';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import db from '../../firebase'
 import {useHistory} from 'react-router-dom'
-import LabelImportantIcon from '@material-ui/icons/LabelImportant';
-
-
-
 
 function MailMessage({mailId}) {
     const history = useHistory();
-    
     const [message, setMessage]=useState({})
     
-   
     useEffect(()=>{
         let unsubscribe;
          unsubscribe=db.collection("messages").doc(mailId).onSnapshot(snapshot=>(
@@ -32,7 +27,6 @@ function MailMessage({mailId}) {
         }).catch(function(error) {
             console.error("Error removing document: ", error);
         });
-        
     }
 
     const dateTimeMessage=new Date(message.timestamp?.toDate())
@@ -53,8 +47,6 @@ function MailMessage({mailId}) {
                 <div className='mailMessage__title-right'>
                     <p>{messageTime}</p>
                 </div>
-               
-              
             </div>
             <div className='mailMessage__body'>
                 <p>{message.message}</p>

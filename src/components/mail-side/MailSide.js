@@ -26,7 +26,7 @@ function MailSide() {
 
     return (
         <div className='mailSide'>
-            <button onClick={openMessageBox}><img src='https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png' className='mailSide__compose-img'/>Compose</button>
+            <button onClick={openMessageBox}><img src='https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png' className='mailSide__compose-img' alt='plus sign' />Compose</button>
             <div className='mailSide__options'>
                 <MailSideRow Icon={InboxIcon} title={'Inbox'} active />
                 <MailSideRow Icon={StarIcon} title={'Starred'} />
