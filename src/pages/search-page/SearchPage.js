@@ -14,11 +14,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 function SearchPage() {
     const[{term},dispatch]=useStateValue();
-    // const {data}=useGoogelSearch(term)
+    const {data}=useGoogelSearch(term)
    
 
-    const data=responseData
-    console.log(data)
+    // const data=responseData
+    // console.log(data)
     
     return (
         <div className='searchPage'>
