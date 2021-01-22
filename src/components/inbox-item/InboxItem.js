@@ -6,7 +6,7 @@ import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import {useHistory} from 'react-router-dom'
 import db from '../../firebase'
 
-function InboxItem({recipient, subject, id, read, timestamp}) {
+function InboxItem({recipient, subject, id, read, message, timestamp}) {
     
     const history=useHistory();
     
@@ -36,6 +36,8 @@ function InboxItem({recipient, subject, id, read, timestamp}) {
             </div>
             <div className='inboxItem__middle'>
                 <p className={read? 'inboxItem__middle--read':'inboxItem__middle--unread'}>{subject}</p>
+                <p>-</p>
+                <p className='test'>{message}</p>
             </div>
             <div className='inboxItem__right'>
                 <p className={read?'inboxItem__right--read':'inboxItem__right--unread'}>{currentDate===messageDate?messageTime:messageDate}</p>

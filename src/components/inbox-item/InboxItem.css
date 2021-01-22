@@ -44,8 +44,25 @@
 }
 
 .inboxItem__middle{
+    display: flex;
     margin-left: 10px;
     flex: 1;
+    overflow: hidden;
+    align-items: center;
+}
+
+.inboxItem__middle>p:first-child{
+    flex-shrink: 0;
+}
+
+.inboxItem__middle>p:nth-child(2){
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+.test{
+    flex-shrink: 0;
+    color: #62666A;
 }
 
 .inboxItem__right{

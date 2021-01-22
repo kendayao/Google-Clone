@@ -23,7 +23,7 @@ function MailMessage({mailId}) {
        return ()=>(
            unsubscribe()
        )
-    },[])
+    },[mailId])
 
     const deleteMessage=()=>{
         history.push('/mail')

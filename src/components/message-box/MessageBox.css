@@ -99,6 +99,12 @@
     color: gray;
 }
 
+@media (max-width: 610px){
+    .messageBox{
+        width: 480px;
+    }
+}
+
 @media (max-width: 480px){
     .messageBox{
         width: 370px;
