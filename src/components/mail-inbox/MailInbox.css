@@ -50,6 +50,12 @@
     cursor: pointer;
 }
 
+.mailInbox__noMailMessage{
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+}
+
 .mailInbox__footer{
     display: flex;
     align-items: center;
@@ -57,6 +63,9 @@
     font-size: 12px;
     color: gray;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+
 }
 
 .mailInbox__footer>.MuiSvgIcon-root{
@@ -64,8 +73,3 @@
     color: gray;
 }
 
-
-.mailInbox__bottom{
-    overflow: hidden;
-    overflow-y: auto;
-}

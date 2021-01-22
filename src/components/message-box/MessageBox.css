@@ -58,6 +58,7 @@
     border: none;
     overflow: scroll;
     font-family: inherit;
+    line-height: 125%;
 }
 
 .messageBox__body>textarea{

@@ -38,7 +38,7 @@ function MailMessage({mailId}) {
     return (
         <div className='mailMessage'>
             <div className='mailMessage__top'>
-                <ArrowBackIcon />
+                <ArrowBackIcon onClick={()=>history.push('/mail')} />
                 <DeleteIcon onClick={deleteMessage}/>
             </div>
             <div className='mailMessage__title'>

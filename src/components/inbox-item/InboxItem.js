@@ -28,7 +28,7 @@ function InboxItem({recipient, subject, message, id, read, timestamp}) {
     }
 
     return (
-        <div className= 'inboxItem' onClick={handleInboxItemClick}>
+        <div className={read? 'inboxItem inboxItem--read': 'inboxItem'  }  onClick={handleInboxItemClick}>
             <div className='inboxItem__left'>
                 <CheckBoxOutlineBlankIcon />
                 <StarBorderIcon />

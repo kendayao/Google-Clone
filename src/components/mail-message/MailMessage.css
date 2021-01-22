@@ -1,23 +1,58 @@
 .mailMessage{
-    width: 100%
+   width: 100%;
 }
 
 .mailMessage__top{
     color: gray;
-    padding: 15px 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.112); ;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.112); 
 }
 
 .mailMessage__top > .MuiSvgIcon-root{
     margin-right: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 999px;
 }
 
-.mailMessage__title-left{
+.mailMessage__top > .MuiSvgIcon-root:hover{
+    background-color: #F4F7F7;
+}
+
+
+.mailMessage__title-left,
+.mailMessage__title-right{
     display: flex;
     align-items: center;
+    padding: 15px 30px 15px 15px;
+}
+
+.mailMessage__title-left>p:nth-child(1){
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.mailMessage__title-left>.MuiSvgIcon-root{
+    color: #E8AB05
+}
+
+.mailMessage__title-right>p{
+    font-size: 12px;
+    color: rgb(84, 84, 84);
+}
+
+.mailMessage__title-left>p:nth-child(3){
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(84, 84, 84);
 }
 
 .mailMessage__title{
     display: flex;
     justify-content: space-between;
+}
+
+.mailMessage__body{
+    padding: 10px 15px;
+    
 }

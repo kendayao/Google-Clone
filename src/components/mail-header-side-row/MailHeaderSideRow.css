@@ -7,13 +7,19 @@
     border-bottom-right-radius: 20px
 }
 
+.mailHeaderSideRow:hover{
+    cursor: pointer;
+    background-color: #F1F3F4;
+}
+
 .mailHeaderSideRow >.mailHeaderSideRow__left>p{
     margin-left: 15px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.mailHeaderSideRow--active{
+.mailHeaderSideRow--active,
+.mailHeaderSideRow--active:hover{
     background-color: #FCE8E6;
     color: #D93026;
 }

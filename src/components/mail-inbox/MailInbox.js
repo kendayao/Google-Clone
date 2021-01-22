@@ -53,14 +53,16 @@ function MailInbox() {
                 </div>
             </div>
             <div className='mailInbox__bottom'>
-                {messages.map(message=>(<InboxItem 
-                recipient={message.data.recipient} 
-                subject={message.data.subject}
-                message={message.data.message}
-                read={message.data.read}
-                timestamp={message.data.timestamp}
-                id={message.id}
-                key={message.id}
+                {messages.length===0?
+                    <p className='mailInbox__noMailMessage'>No New Mail</p>:
+                    messages.map(message=>(<InboxItem 
+                    recipient={message.data.recipient} 
+                    subject={message.data.subject}
+                    message={message.data.message}
+                    read={message.data.read}
+                    timestamp={message.data.timestamp}
+                    id={message.id}
+                    key={message.id}
                 />))}
             </div>
         </div>
