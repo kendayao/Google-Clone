@@ -36,7 +36,7 @@ function InboxItem({recipient, subject, id, read, message, timestamp}) {
             </div>
             <div className='inboxItem__middle'>
                 <p className={read? 'inboxItem__middle--read':'inboxItem__middle--unread'}>{subject}</p>
-                <p>-</p>
+                <p className='inboxItem__middle-hyphen'>-</p>
                 <p className='inboxItem__middle-message'>{message}</p>
             </div>
             <div className='inboxItem__right'>
