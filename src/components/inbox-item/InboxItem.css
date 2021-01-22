@@ -75,9 +75,11 @@
     }
 
     .inboxItem__left>p,
-    .inboxItem__middle p,
-    .inboxItem__right>p{
+    .inboxItem__middle>p,
+    .inboxItem__right>p,
+    .inboxItem__middle-message{
         font-size: 12px;
     }
+
 }
 
