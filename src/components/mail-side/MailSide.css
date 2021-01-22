@@ -1,10 +1,10 @@
-.mailheaderside{
+.mailSide{
     min-width: 235px; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.112);
     margin-right: 10px;
 }
 
-.mailheaderside>button{
+.mailSide>button{
     display: flex;
     align-items: center;
     margin-left: 10px;
@@ -21,27 +21,27 @@
     transition: box-shadow .2s;
 }
 
-.mailheaderside>button:focus{
+.mailSide>button:focus{
     outline: none;
 }
 
-.mailheaderside>button:active{
+.mailSide>button:active{
     box-shadow:  1px 1px 7px 2px  rgba(0, 0, 0, 0.242);
 }
 
 
-.mailheaderside__compose-img{
+.mailSide__compose-img{
  margin-right: 10px;
  height: 30px;
 }
 
-.mailheaderside__options{
+.mailSide__options{
     margin-top: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.112);
 }
 
-.mailheaderside__meet-options>p{
+.mailSide__meet-options>p{
     padding-left: 30px;
     margin-bottom: 5px;
     margin-top: 10px;
@@ -49,12 +49,12 @@
     font-weight: 500;
 }
 
-.mailheaderside__meet-options{
+.mailSide__meet-options{
     padding-bottom: 5px;
 }
 
 @media (max-width: 800px){
-    .mailheaderside{
+    .mailSide{
         display: none;
     }
 }

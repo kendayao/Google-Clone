@@ -1,4 +1,4 @@
-.mailHeaderSideRow{
+.mailSideRow{
     display: flex;
     align-items: center;
     padding: 5px 10px 5px 30px;
@@ -7,41 +7,41 @@
     border-bottom-right-radius: 20px
 }
 
-.mailHeaderSideRow:hover{
+.mailSideRow:hover{
     cursor: pointer;
     background-color: #F1F3F4;
 }
 
-.mailHeaderSideRow >.mailHeaderSideRow__left>p{
+.mailSideRow >.mailSideRow__left>p{
     margin-left: 15px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.mailHeaderSideRow--active,
-.mailHeaderSideRow--active:hover{
+.mailSideRow--active,
+.mailSideRow--active:hover{
     background-color: #FCE8E6;
     color: #D93026;
 }
 
-.mailHeaderSideRow__left{
+.mailSideRow__left{
     display: flex;
     align-items: center;
 }
 
-.mailHeaderSideRow__right{
+.mailSideRow__right{
     font-size: 14px;
     font-weight: 500;
 }
 
-.mailHeaderSideRow__icon{
+.mailSideRow__icon{
     color: gray;
 }
 
-.mailHeaderSideRow__right--hide{
+.mailSideRow__right--hide{
     display: none;
 }
 
-.mailHeaderSideRow__right--show{
+.mailSideRow__right--show{
     display: block;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './MailBody.css'
-import MailHeaderSide from '../mail-header-side/MailHeaderSide'
+import MailSide from '../mail-side/MailSide'
 import MailInbox from '../mail-inbox/MailInbox'
 import MessageBox from '../message-box/MessageBox'
 import {useStateValue} from '../../contextAPI/StateProvider'
@@ -13,7 +13,7 @@ function MailBody() {
     const { mailId } =useParams();
     return (
         <div className='mailBody'>
-            <MailHeaderSide/>
+            <MailSide/>
             {mailId?<MailMessage mailId={mailId}/>:<MailInbox/>}
             {messageBoxStatus?<MessageBox />:null}
         </div>
