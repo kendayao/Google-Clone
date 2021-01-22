@@ -13,6 +13,10 @@
     margin-right: 15px;
 }
 
+.mailInbox__top > .MuiSvgIcon-root:last-child{
+    display: none;
+}
+
 .mailInbox__options{
     display: flex;
     align-items: center;
@@ -72,4 +76,21 @@
     font-size: 4px;
     color: gray;
 }
+
+@media (max-width: 800px){
+    .mailInbox__top > .MuiSvgIcon-root:last-child{
+        cursor: pointer;
+        display: block;
+    }
+    .mailInbox__top > .MuiSvgIcon-root:not(:last-child){
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .mailInbox__options>p{
+        font-size: 14px;
+    }
+}
+
 

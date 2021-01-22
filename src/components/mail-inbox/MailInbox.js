@@ -9,13 +9,14 @@ import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import InboxItem from '../inbox-item/InboxItem'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import CreateIcon from '@material-ui/icons/Create';
 import db from '../../firebase'
 import {useStateValue} from '../../contextAPI/StateProvider'
 import {actionTypes} from '../../contextAPI/reducer'
 
 function MailInbox() {
 
-    const [{messages},dispatch]=useStateValue();
+    const [{messages,messageBoxStatus},dispatch]=useStateValue();
 
     useEffect(()=>{
         db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot=>(
@@ -29,6 +30,12 @@ function MailInbox() {
         ))
     },[])
 
+    const openMessageBox=()=>{
+        dispatch({
+            type: actionTypes.OPEN_MESSAGE_BOX,
+            messageBoxStatus: !messageBoxStatus
+        })
+    }
 
     return (
         <div className='mailInbox'>
@@ -37,6 +44,7 @@ function MailInbox() {
                 <ArrowDropDownIcon fontSize='small' />
                 <RefreshIcon fontSize='small' />
                 <MoreVertIcon fontSize='small' />
+                <CreateIcon onClick={openMessageBox}/>
             </div>
             <div className='mailInbox__middle'>
                 <div className='mailInbox__options mailInbox__options--active' >

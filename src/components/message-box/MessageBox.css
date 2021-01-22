@@ -98,3 +98,15 @@
     margin-right: 8px;
     color: gray;
 }
+
+@media (max-width: 480px){
+    .messageBox{
+        width: 370px;
+    }
+}
+
+@media (max-width: 320px){
+    .messageBox{
+        width: 320px;
+    }
+}

@@ -16,10 +16,13 @@ function MailMessage({mailId}) {
     
    
     useEffect(()=>{
-       db.collection("messages").doc(mailId).onSnapshot(snapshot=>(
+        let unsubscribe;
+         unsubscribe=db.collection("messages").doc(mailId).onSnapshot(snapshot=>(
             setMessage(snapshot.data())
         ))
-       
+       return ()=>(
+           unsubscribe()
+       )
     },[])
 
     const deleteMessage=()=>{

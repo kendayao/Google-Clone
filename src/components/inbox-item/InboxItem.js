@@ -5,10 +5,9 @@ import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import {useHistory} from 'react-router-dom'
 import db from '../../firebase'
-import {useStateValue} from '../../contextAPI/StateProvider'
 
-function InboxItem({recipient, subject, message, id, read, timestamp}) {
-    const [{},dispatch]=useStateValue();
+function InboxItem({recipient, subject, id, read, timestamp}) {
+    
     const history=useHistory();
     
     const currentDateTime=new Date()

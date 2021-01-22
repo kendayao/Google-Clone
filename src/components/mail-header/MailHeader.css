@@ -16,16 +16,24 @@
     align-items: center;
 }
 
-.mailHeader__left > img{
+.mailHeader__links> img{
     height: 50px;
 }
 
-.mailHeader__left > p{
+.mailHeader__links > p{
     font-size: 25px;
     font-weight: 300;
     color: #5F6368;
     margin-right: 80px;
 }
+
+.mailHeader__links{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
 
 .mailHeader__input>input{
     padding: 10px;
@@ -62,4 +70,18 @@
     color: gray;
 }
 
+@media (max-width: 800px){
+    .mailHeader__right,
+    .mailHeader__left>.MuiSvgIcon-root{
+        display: none;
+    }
+    .mailHeader__input{
+        display: none;
+    }
+
+    .mailHeader{
+        padding: 10px 20px 7px 0px;
+    }
+
+}
 

@@ -56,3 +56,30 @@
     padding: 10px 15px;
     
 }
+
+@media (max-width: 480px){
+    .mailMessage__title-left>p:nth-child(1){
+        font-size: 20px;
+        margin-right: 2px;
+        font-weight: 500;
+    }
+
+    .mailMessage__title-left>.MuiSvgIcon-root{
+        display: none;
+    }
+
+    .mailMessage__body>p{
+        font-size: 14px;
+        line-height: 145%;
+    }
+}
+
+@media (max-width: 320px){
+    .mailMessage__title-left>p:nth-child(1){
+        font-size: 13px;
+    }
+
+    .mailMessage__title-left{
+        padding: 15px 20px 15px 15px;
+    }
+}

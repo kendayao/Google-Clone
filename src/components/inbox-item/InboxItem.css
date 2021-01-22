@@ -52,3 +52,15 @@
     margin-left: 10px;
 }
 
+@media (max-width: 480px){
+    .inboxItem__left>.MuiSvgIcon-root{
+        display: none;
+    }
+
+    .inboxItem__left>p,
+    .inboxItem__middle>p,
+    .inboxItem__right>p{
+        font-size: 12px;
+    }
+}
+

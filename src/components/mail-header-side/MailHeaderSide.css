@@ -52,3 +52,9 @@
 .mailheaderside__meet-options{
     padding-bottom: 5px;
 }
+
+@media (max-width: 800px){
+    .mailheaderside{
+        display: none;
+    }
+}
