@@ -48,11 +48,11 @@ function MessageBox() {
                 <CloseIcon onClick={closeMessageBox} fontSize='small' />
             </div>
             <form className='messageBox__body'>
-                <input type='email' value={toEmail} onChange={(event)=>setToEmail(event.target.value)} placeholder='To'/>
-                <input type='text' value={subject} onChange={(event)=>setSubject(event.target.value)} placeholder='Subject'/>
-                <textarea type='text' value={message} onChange={(event)=>setMessage(event.target.value)} rows='14'/>
+                <input type='email' value={toEmail} onChange={(event)=>setToEmail(event.target.value)} required placeholder='To'/>
+                <input type='text' value={subject} onChange={(event)=>setSubject(event.target.value)} required  placeholder='Subject'/>
+                <textarea type='text' value={message} onChange={(event)=>setMessage(event.target.value)} required rows='14'/>
                 <div className='messageBox__footer'>
-                    <button onClick={handleSubmit}>Send</button>
+                    <button onClick={handleSubmit} disabled={!toEmail||!subject||!message}>Send</button>
                     <AttachFileIcon/>
                     <FontDownloadOutlinedIcon/>
                     <EmojiEmotionsOutlinedIcon/>

@@ -1,9 +1,14 @@
 import React from 'react'
 import './MailHeaderSideRow.css'
+import {useStateValue} from '../../contextAPI/StateProvider'
+import {actionTypes} from '../../contextAPI/reducer'
 
 
 
 function MailHeaderSideRow({Icon, title, active}) {
+
+    const [{messages},dispatch]=useStateValue();
+
     return (
         <div className={active?'mailHeaderSideRow mailHeaderSideRow--active': 'mailHeaderSideRow'}>
             <div className='mailHeaderSideRow__left'>
@@ -11,7 +16,7 @@ function MailHeaderSideRow({Icon, title, active}) {
             <p>{title}</p>
             </div>
             <div className={active?'mailHeaderSideRow__right--show mailHeaderSideRow__right':'mailHeaderSideRow__right--hide'}>
-                <p>100</p>
+                <p>{messages?.length}</p>
             </div>         
         </div>
     )

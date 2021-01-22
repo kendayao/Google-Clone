@@ -10,10 +10,13 @@ function App() {
   return (
     <div className="app">
       <Switch>
+        <Route path='/mail/:mailId'>
+          <MailHeader/>
+          <MailBody/>
+        </Route>
       <Route path='/mail'>
           <MailHeader/>
           <MailBody/>
-        
         </Route>
         <Route path='/search'>
           <SearchPage/>

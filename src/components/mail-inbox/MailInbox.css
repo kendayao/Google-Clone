@@ -38,6 +38,18 @@
     border-bottom: 3px solid #D93026;
 }
 
+.mailInbox__options:nth-child(2):hover{
+    color: #1A73E8;
+    border-bottom: 3px solid #1A73E8;
+    cursor: pointer;
+}
+
+.mailInbox__options:nth-child(3):hover{
+    color: #288037;
+    border-bottom: 3px solid #288037;
+    cursor: pointer;
+}
+
 .mailInbox__footer{
     display: flex;
     align-items: center;

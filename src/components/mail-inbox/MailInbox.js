@@ -10,23 +10,24 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import InboxItem from '../inbox-item/InboxItem'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import db from '../../firebase'
+import {useStateValue} from '../../contextAPI/StateProvider'
+import {actionTypes} from '../../contextAPI/reducer'
 
 function MailInbox() {
 
-    const [messages, setMessages]=useState([])
+    const [{messages},dispatch]=useStateValue();
 
     useEffect(()=>{
         db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot=>(
-            setMessages(snapshot.docs.map(doc=>({
+           dispatch({
+               type: actionTypes.SET_MESSAGES,
+               messages: snapshot.docs.map(doc=>({
                 id: doc.id,
                 data: doc.data()
-            })))
+            }))
+           })
         ))
-
-            
     },[])
-
-    console.log(messages)
 
 
     return (
@@ -56,7 +57,9 @@ function MailInbox() {
                 recipient={message.data.recipient} 
                 subject={message.data.subject}
                 message={message.data.message}
+                read={message.data.read}
                 timestamp={message.data.timestamp}
+                id={message.id}
                 key={message.id}
                 />))}
             </div>
