@@ -1,0 +1,23 @@
+.mailMessage{
+    width: 100%
+}
+
+.mailMessage__top{
+    color: gray;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.112); ;
+}
+
+.mailMessage__top > .MuiSvgIcon-root{
+    margin-right: 15px;
+}
+
+.mailMessage__title-left{
+    display: flex;
+    align-items: center;
+}
+
+.mailMessage__title{
+    display: flex;
+    justify-content: space-between;
+}

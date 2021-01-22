@@ -14,7 +14,7 @@ function MailBody() {
     return (
         <div className='mailBody'>
             <MailHeaderSide/>
-            {mailId?<MailMessage/>:<MailInbox/>}
+            {mailId?<MailMessage mailId={mailId}/>:<MailInbox/>}
             {messageBoxStatus?<MessageBox />:null}
         </div>
     )
