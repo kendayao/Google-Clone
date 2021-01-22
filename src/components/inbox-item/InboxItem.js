@@ -37,7 +37,7 @@ function InboxItem({recipient, subject, id, read, message, timestamp}) {
             <div className='inboxItem__middle'>
                 <p className={read? 'inboxItem__middle--read':'inboxItem__middle--unread'}>{subject}</p>
                 <p>-</p>
-                <p className='test'>{message}</p>
+                <p className='inboxItem__middle-message'>{message}</p>
             </div>
             <div className='inboxItem__right'>
                 <p className={read?'inboxItem__right--read':'inboxItem__right--unread'}>{currentDate===messageDate?messageTime:messageDate}</p>

@@ -60,7 +60,7 @@
     margin-right: 5px;
 }
 
-.test{
+.inboxItem__middle-message{
     flex-shrink: 0;
     color: #62666A;
 }
@@ -75,7 +75,7 @@
     }
 
     .inboxItem__left>p,
-    .inboxItem__middle>p,
+    .inboxItem__middle p,
     .inboxItem__right>p{
         font-size: 12px;
     }
