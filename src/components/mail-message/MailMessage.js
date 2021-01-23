@@ -42,7 +42,7 @@ function MailMessage({mailId}) {
                 <div className='mailMessage__title-left'>
                     <p>{message.subject}</p>
                     <LabelImportantIcon/>
-                    <p>{message.recipient}</p>
+                    <p>{'<'+message.recipient+'>'}</p>
                 </div>
                 <div className='mailMessage__title-right'>
                     <p>{messageTime}</p>
